@@ -21,6 +21,7 @@
         type="text"
         name="message"
         placeholder="Digite sua mensagem aqui"
+        id="batata"
       />
       <button type="submit">Enviar</button>
     </form>
@@ -61,6 +62,9 @@
           renderMessage(messageObject);
           socket.emit("sendMessage", messageObject);
         }
+        let batata = document.querySelector("#batata");
+
+        batata.value = " ";
       });
     </script>
   </body>
